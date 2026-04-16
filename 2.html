@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Pen | 極致書寫</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Noto Sans TC",sans-serif;}
+body{background:#000;color:#fff;overflow-x:hidden;;
+overflow-x:hidden;}
+
+/* HERO */
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;}
+.hero h1{font-size:72px;letter-spacing:6px;font-weight:700;opacity:0;transform:translateY(40px);transition:1s;}
+.hero p{margin-top:20px;opacity:0;transform:translateY(40px);transition:1.2s;opacity:.7;}
+.hero.show h1,.hero.show p{opacity:1;transform:translateY(0);}
+
+/* PARALLAX IMAGE */
+.parallax{height:80vh;background:url('image/96999.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;}
+.parallax h2{font-size:36px;background:rgba(0,0,0,0.5);padding:20px 40px;border-radius:10px;}
+
+/* STORY */
+.story{max-width:800px;margin:100px auto;padding:20px;text-align:center;opacity:0;transform:translateY(40px);transition:1s;}
+.story.show{opacity:1;transform:translateY(0);}
+.story h2{font-size:30px;margin-bottom:20px;}
+.story p{line-height:1.8;opacity:.75;}
+
+/* PRODUCTS */
+.products{max-width:1200px;margin:80px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:20px;}
+.card{background:rgba(255,255,255,0.05);border-radius:24px;padding:20px;backdrop-filter:blur(16px);transition:.5s;position:relative;overflow:hidden;opacity:0;transform:translateY(40px);}
+.card.show{opacity:1;transform:translateY(0);}
+.card::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transition:.8s;}
+.card:hover::before{left:100%;}
+.card:hover{transform:translateY(-12px) scale(1.03);}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:14px;margin-bottom:15px;}
+.card h3{margin-bottom:10px;}
+.card p{opacity:.7;font-size:14px;}
+
+/* FOOTER */
+footer{text-align:center;padding:60px 20px;background:#0a0a0a;margin-top:100px;opacity:.6;font-size:13px;}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:42px;}
+.parallax h2{font-size:22px;}
+}
+#lightbox{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+#lightbox img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+</style>
+</head>
+
+<body>
+<div id="lightbox">
+    <img id="lightbox-img">
+</div>
+<section class="hero" id="hero">
+<h1>Master Pen</h1>
+<p>最溫暖的禮物就是手寫的溫度</p>
+</section>
+
+<section class="parallax">
+<h2>極致工藝 · 台灣製造</h2>
+</section>
+
+<section class="story fade">
+<h2>品牌故事</h2>
+
+<p>筆主有限公司在台灣從事筆類工廠，生產內外銷已有多年的歷程，國外許多珠寶飾品、禮贈品筆類產品由我們OEM/ODM代工生產，自從Covid-19以後我們回饋國內客戶，成立筆主有限公司(鼻祖)即有領頭羊的意涵，希望能以高級訂製的概念打造獨特的品味，期盼帶給國人精緻時尚的筆類組合。彰顯出"最溫暖的禮物就是手寫的溫度"，我們不以低價來競爭乃以口碑來傳承。若 貴公司有相同理念必能共創商機共享雙贏        
+</p>
+<p>
+
+For years, Master Pen Ltd. is a specialist, manufacturer of writing instrument in Taiwan and known for its distinctive crystal pen designs, pen set, patented product, OEM/ODM product and quick service.   
+</p>
+
+</section>
+
+<section class="products">
+<div class="card"><img src="image/96992.jpg" alt=""><h3>PB-2601</h3><p>尺寸:10X135毫米</p></div>
+<div class="card"><img src="image/96993-.jpg" alt=""><h3>PB-2601</h3><p>尺寸:10X135毫米</p></div>
+<div class="card"><img src="image/96995.jpg" alt=""><h3>PB-2601</h3><p>尺寸:10X135毫米</p></div>
+<div class="card"><img src="image/96996.jpg" alt=""><h3>PB-241</h3><p>尺寸:12.2X138毫米</p></div>
+<div class="card"><img src="image/96997.jpg" alt=""><h3>PB-241</h3><p>尺寸:12.2X138毫米</p></div>
+<div class="card"><img src="image/96998.jpg" alt=""><h3>PB-241</h3><p>尺寸:12.2X138毫米</p></div>
+<div class="card"><img src="image/96999.jpg" alt=""><h3>PB-138</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97000.jpg" alt=""><h3>PB-138</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97001.jpg" alt=""><h3>PB-138</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97002.jpg" alt=""><h3>PB-107T</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97003.jpg" alt=""><h3>PB-107T</h3><p>尺寸:10X127毫米</p></div>
+<div class="card"><img src="image/97004.jpg" alt=""><h3>PB-107T</h3><p>尺寸:10X127毫米</p></div>
+<div class="card"><img src="image/97005.jpg" alt=""><h3>PB-107T</h3><p>尺寸:10X127毫米</p></div>
+<div class="card"><img src="image/97006.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+<div class="card"><img src="image/97007.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+<div class="card"><img src="image/97008.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+<div class="card"><img src="image/97009.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+</section>
+<div id="lightbox">
+    <img id="lightbox-img">
+</div>
+<footer>
+    <p>Master Pen © 2026</p>
+    <p>台灣製造 Made in Taiwan</p>
+    <p>聯絡電話：TEL:(02)2999-9601 手機:0922 005 677 徐小姐</p>
+    <p>Email：trinalco@ms31.hinet.net</p>
+    <p>地址:新北市三重區光復路2段19號 NO.19,SEC. 2, GUANGFU RD., SANCHONG DIST., NEW TAIPEI CITY 24158,TAIWAN</p>
+</footer>
+
+<script>
+// scroll animation
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');}
+});
+},{threshold:.2});
+
+document.querySelectorAll('.hero,.story,.card').forEach(el=>observer.observe(el));
+
+// hero load
+window.onload=()=>{document.getElementById('hero').classList.add('show');}
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+document.querySelectorAll('.card img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
