@@ -39,77 +39,24 @@ For years, Master Pen Ltd. is a specialist, manufacturer of writing instrument i
 </section>
 
 <section class="products">
-<!-- PB-2601 -->
-<div class="group">
-  <div class="group-main">
-    <img src="image/96992.jpg">
-    <h2>PB-2601</h2>
-  </div>
-
-  <div class="group-list">
-    <img src="image/96992.jpg">
-    <img src="image/96993-.jpg">
-    <img src="image/96995.jpg">
-  </div>
-</div>
-
-<!-- PB-241 -->
-<div class="group">
-  <div class="group-main">
-    <img src="image/96996.jpg">
-    <h2>PB-241</h2>
-  </div>
-
-  <div class="group-list">
-    <img src="image/96996.jpg">
-    <img src="image/96997.jpg">
-    <img src="image/96998.jpg">
-  </div>
-</div>
-
-<!-- PB-138 -->
-<div class="group">
-  <div class="group-main">
-    <img src="image/96999.jpg">
-    <h2>PB-138</h2>
-  </div>
-
-  <div class="group-list">
-    <img src="image/96999.jpg">
-    <img src="image/97000.jpg">
-    <img src="image/97001.jpg">
-  </div>
-</div>
-<!-- PB-107T -->
-<div class="group">
-  <div class="group-main">
-    <img src="image/97002.jpg">
-    <h2>PB-107T</h2>
-  </div>
-
-  <div class="group-list">
-    <img src="image/97002.jpg">
-    <img src="image/97003.jpg">
-    <img src="image/97004.jpg">
-    <img src="image/97005.jpg">
-  </div>
-</div>
-<!-- AD-PB01 -->
-<div class="group">
-  <div class="group-main">
-    <img src="image/97006.jpg">
-    <h2>AD-PB01</h2>
-  </div>
-
-  <div class="group-list">
-    <img src="image/97006.jpg">
-    <img src="image/97007.jpg">
-    <img src="image/97008.jpg">
-    <img src="image/97009.jpg">
-  </div>
-</div>
+<div class="card"><img src="image/96992.jpg" alt=""><h3>PB-2601</h3><p>尺寸:10X135毫米</p></div>
+<div class="card"><img src="image/96993-.jpg" alt=""><h3>PB-2601</h3><p>尺寸:10X135毫米</p></div>
+<div class="card"><img src="image/96995.jpg" alt=""><h3>PB-2601</h3><p>尺寸:10X135毫米</p></div>
+<div class="card"><img src="image/96996.jpg" alt=""><h3>PB-241</h3><p>尺寸:12.2X138毫米</p></div>
+<div class="card"><img src="image/96997.jpg" alt=""><h3>PB-241</h3><p>尺寸:12.2X138毫米</p></div>
+<div class="card"><img src="image/96998.jpg" alt=""><h3>PB-241</h3><p>尺寸:12.2X138毫米</p></div>
+<div class="card"><img src="image/96999.jpg" alt=""><h3>PB-138</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97000.jpg" alt=""><h3>PB-138</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97001.jpg" alt=""><h3>PB-138</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97002.jpg" alt=""><h3>PB-107T</h3><p>尺寸:12X136毫米</p></div>
+<div class="card"><img src="image/97003.jpg" alt=""><h3>PB-107T</h3><p>尺寸:10X127毫米</p></div>
+<div class="card"><img src="image/97004.jpg" alt=""><h3>PB-107T</h3><p>尺寸:10X127毫米</p></div>
+<div class="card"><img src="image/97005.jpg" alt=""><h3>PB-107T</h3><p>尺寸:10X127毫米</p></div>
+<div class="card"><img src="image/97006.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+<div class="card"><img src="image/97007.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+<div class="card"><img src="image/97008.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
+<div class="card"><img src="image/97009.jpg" alt=""><h3>AD-PB01</h3><p>尺寸:12.2X134毫米</p></div>
 </section>
-
 <div id="lightbox">
     <img id="lightbox-img">
 </div>
@@ -122,36 +69,29 @@ For years, Master Pen Ltd. is a specialist, manufacturer of writing instrument i
 </footer>
 
 <script>
-// 展開 / 收合
-document.querySelectorAll('.group-main').forEach(main=>{
-  main.addEventListener('click', ()=>{
-    
-    const group = main.parentElement;
-
-    // 👉 一次只開一個（電商感）
-    document.querySelectorAll('.group').forEach(g=>{
-      if(g !== group) g.classList.remove('active');
-    });
-
-    group.classList.toggle('active');
-  });
+// scroll animation
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');}
 });
+},{threshold:.2});
 
+document.querySelectorAll('.hero,.story,.card').forEach(el=>observer.observe(el));
 
-// ===== Lightbox =====
+// hero load
+window.onload=()=>{document.getElementById('hero').classList.add('show');}
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-document.querySelectorAll('.group-list img').forEach(img=>{
-  img.addEventListener('click', (e)=>{
-    e.stopPropagation(); // 防止觸發收合
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
+document.querySelectorAll('.card img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
 });
 
-lightbox.addEventListener('click', ()=>{
-  lightbox.style.display = 'none';
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
 });
 </script>
 
