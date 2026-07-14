@@ -8,7 +8,7 @@ overflow-x:hidden;}
 .hero.show .logo,.hero.show p{opacity:1;transform:translateY(0);}
 
 /* PARALLAX IMAGE */
-.parallax{height:80vh;background:url('image/96999.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;}
+.parallax{height:80vh;background:url('image/2.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;}
 .parallax h2{font-size:36px;background:rgba(0,0,0,0.5);padding:20px 40px;border-radius:10px;}
 
 /* STORY */
