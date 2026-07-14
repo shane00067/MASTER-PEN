@@ -9,6 +9,12 @@ overflow-x:hidden;}
 
 /* PARALLAX IMAGE */
 .parallax{height:80vh;background:url('image/2.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;}
+@media (max-width:768px){
+  .parallax{
+    background-attachment:scroll; /* 手機改回一般背景，不做視差 */
+    height:50vh; /* 手機螢幕通常不需要 80vh 那麼高 */
+  }
+  }
 .parallax h2{font-size:36px;background:rgba(0,0,0,0.5);padding:20px 40px;border-radius:10px;}
 
 /* STORY */
