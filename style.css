@@ -12,11 +12,43 @@ overflow-x:hidden;}
 .parallax h2{font-size:36px;background:rgba(0,0,0,0.5);padding:20px 40px;border-radius:10px;}
 
 /* STORY */
-.story{max-width:800px;margin:100px auto;padding:20px;text-align:center;opacity:0;transform:translateY(40px);transition:1s;}
-.story.show{opacity:1;transform:translateY(0);}
-.story h2{font-size:30px;margin-bottom:20px;}
-.story p{line-height:1.8;opacity:.75;}
+/*.story{max-width:800px;margin:100px auto;padding:20px;text-align:center;opacity:0;transform:translateY(40px);transition:1s;}*/
 
+/*.story h2{font-size:30px;margin-bottom:20px;}
+.story p{line-height:1.8;opacity:.75;}*/
+
+.story.show{opacity:1;transform:translateY(0);}
+
+.story {
+  max-width: 754px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  color: #e6e6e6; /* 不用純白，降低對比刺眼感 */
+}
+
+.story h2 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 48px;
+}
+
+.story p {
+  text-align: left;        /* 或改成 justify 讓左右對齊 */
+  line-height: 2.1;
+  letter-spacing: 0.03em;
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+}
+
+.story p:last-child {
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  color: #b3b3b3;   /* 英文部分稍微淡化，做出層次 */
+  font-style: italic;
+  line-height: 1.8;
+}
 /* FOOTER */
 footer{text-align:center;padding:60px 20px;background:#0a0a0a;margin-top:100px;opacity:.6;font-size:13px;}
 
