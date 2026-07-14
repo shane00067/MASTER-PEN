@@ -3,9 +3,9 @@ overflow-x:hidden;}
 
 /* HERO */
 .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;}
-.hero h1{font-size:72px;letter-spacing:6px;font-weight:700;opacity:0;transform:translateY(40px);transition:1s;}
+.hero .logo{width:min(500px,70%);height:auto;opacity:0;transform:translateY(40px);transition:1s;}
 .hero p{margin-top:20px;opacity:0;transform:translateY(40px);transition:1.2s;opacity:.7;}
-.hero.show h1,.hero.show p{opacity:1;transform:translateY(0);}
+.hero.show .logo,.hero.show p{opacity:1;transform:translateY(0);}
 
 /* PARALLAX IMAGE */
 .parallax{height:80vh;background:url('image/96999.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;}
@@ -22,7 +22,7 @@ footer{text-align:center;padding:60px 20px;background:#0a0a0a;margin-top:100px;o
 
 /* MOBILE */
 @media(max-width:768px){
-.hero h1{font-size:42px;}
+.hero .logo{width:85%;}
 .parallax h2{font-size:22px;}
 }
 
