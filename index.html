@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
 <section class="hero" id="hero">
 <h1>Master Pen</h1>
 <p>最溫暖的禮物就是手寫的溫度</p>
@@ -192,18 +191,7 @@ document.querySelectorAll('.hero, .story, .group').forEach(el=>observer.observe(
 
 window.onload = ()=>{ document.getElementById('hero').classList.add('show'); };
 
-// ===== 展開 / 收合（一次只開一個，電商手風琴感）=====
-document.querySelectorAll('.group-main').forEach(main=>{
-  main.addEventListener('click', ()=>{
-    const group = main.parentElement;
 
-    document.querySelectorAll('.group').forEach(g=>{
-      if(g !== group) g.classList.remove('active');
-    });
-
-    group.classList.toggle('active');
-  });
-});
 
 // ===== Lightbox（放大圖片）=====
 const lightbox = document.getElementById('lightbox');

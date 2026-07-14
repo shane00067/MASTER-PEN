@@ -63,7 +63,6 @@ footer{text-align:center;padding:60px 20px;background:#0a0a0a;margin-top:100px;o
 .group-main{
   text-align:center;
   padding:20px;
-  cursor:pointer;
 }
 
 .group-main img{
@@ -84,20 +83,11 @@ footer{text-align:center;padding:60px 20px;background:#0a0a0a;margin-top:100px;o
   opacity:.55;
 }
 
-/* 展開區 */
+/* 圖片列表：直接常駐顯示，不需點擊展開 */
 .group-list{
-  max-height:0;
-  overflow:hidden;
-  transition:.4s;
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(80px,1fr));
   gap:10px;
-  padding:0 15px;
-}
-
-/* 展開時 */
-.group.active .group-list{
-  max-height:500px;
   padding:15px;
 }
 
